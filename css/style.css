@@ -1776,3 +1776,68 @@ label #bars
 {
 	font-size: 20px;
 }
+
+@media(max-width: 650px)
+{
+	.card-name
+	{
+		font-size: 22px;
+	}
+
+	.designation
+	{
+		font-size: 18px;
+	}
+}
+
+@media(max-width: 500px)
+{
+	.card-name
+	{
+		font-size: 20px;
+	}
+
+	.designation
+	{
+		font-size: 17px;
+	}
+}
+
+@media(max-width: 400px)
+{
+	.card-name
+	{
+		font-size: 20px;
+	}
+
+	.designation
+	{
+		font-size: 17px;
+	}
+}
+
+@media(max-width: 346px)
+{
+	.card-name
+	{
+		font-size: 18px;
+	}
+
+	.designation
+	{
+		font-size: 16px;
+	}
+}
+
+@media(max-width: 322px)
+{
+	.card-name
+	{
+		font-size: 17px;
+	}
+
+	.designation
+	{
+		font-size: 16px;
+	}
+}
