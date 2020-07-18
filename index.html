@@ -166,6 +166,32 @@
 			document.getElementById('footer-image').style.width = document.getElementById('footer-image-div').offsetWidth+'px';
 			document.getElementById('footer-image-div').style.height = document.getElementById('footer-image').clientHeight+'px';
 			document.getElementById('footer-image-div').style.marginTop = ((document.getElementById('footer-3').offsetHeight - document.getElementById('footer-image').clientHeight)/2)+'px';
+
+
+			var test_height = document.getElementsByClassName('testimonial-height');
+
+			for(var i=0; i<test_height.length;i++)
+			{
+				test_height[i].style.height = 'auto';
+			}
+
+			var car_item = document.getElementsByClassName('carousel-item');
+			for(var i=0; i<car_item.length;i++)
+			{
+				if(car_item[i].classList.contains("active"))
+				{
+					car_item[i].classList.remove("active");
+					break;
+				}
+			}
+			car_item[0].classList.add("active");
+
+			for(var i=0; i<test_height.length;i++)
+			{
+				test_height[i].style.height = document.getElementById('longest').clientHeight+'px';
+			}
+
+			
 			page_height();
 		}
 
@@ -456,27 +482,70 @@
 
 
 <div class="proudy">
-	<h2 class="text-center subname pt-4 pb-4 proud-client boom-opacity">Our Proud Clients</h2>
+	<div class="proudy">
+		<h2 class="text-center subname pt-4 pb-4 proud-client boom-opacity">Our Proud Clients</h2>
 
-	<div class="pb-4 pt-2">
+		<div class="pb-4 pt-2">
 
-		<div class="client-strip py-4">
-		
-			<div class="img-strip" id="img-strip">
-				<div class="image-move"><img src="images/logofull.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
-				<div class="image-move"><img src="images/3.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
-				<div class="image-move"><img src="images/4882.jpg" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
-				<div class="image-move"><img src="images/logo.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
-				<div class="image-move"><img src="images/longlogo.jpg" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
-				<div class="image-move"><img src="images/recycle.jpg" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
-				<div class="image-move"><img src="images/triangles_bg.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
+			<div class="client-strip py-4">
+			
+				<div class="img-strip" id="img-strip">
+					<div class="image-move"><img src="images/logofull.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
+					<div class="image-move"><img src="images/3.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
+					<div class="image-move"><img src="images/4882.jpg" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
+					<div class="image-move"><img src="images/logo.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
+					<div class="image-move"><img src="images/longlogo.jpg" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
+					<div class="image-move"><img src="images/recycle.jpg" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
+					<div class="image-move"><img src="images/triangles_bg.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
+				</div>
 			</div>
+
+
+
+			
+
+
+
+
+
+
+			
+
 		</div>
-
-
-		<div class="container text-right mt-md-5 mt-4"><p class="text-justify home-happy boom-opacity">We are happy to serve food, consumer goods and edible oil industries across Ratnagiri, Raigad, Panvel and Navi Mumbai.</p></div>
-
 	</div>
+
+
+	<h2 class="text-center container subname pb-4 proud-client boom-opacity">Client Testimonials</h2>
+
+	<div class="container pb-4">
+	    <div id="testimonials" class="carousel slide" data-ride="carousel">
+	    	<ol class="carousel-indicators mb-0">
+			    <li data-target="#testimonials" data-slide-to="0" class="active"></li>
+			    <li data-target="#testimonials" data-slide-to="1"></li>
+			</ol>
+	        <div class="carousel-inner" role="listbox">
+	            <div class="carousel-item active text-center p-4">
+	            	<h5 class="testimonial-name">Name</h5>
+	                <p class="testimonial-height" id="longest">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque exercitationem vel tenetur, voluptas, neque enim, suscipit nisi eos deleniti eius quibusdam nesciunt deserunt officia natus corrupti, eum voluptate inventore iure!</p>
+	            </div>
+	            <div class="carousel-item text-center p-4">
+	            	<h5 class="testimonial-name">Name</h5>
+	                <p class="testimonial-height">2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque exercitationem vel tenetur, voluptas, neque enim, suscipit nisi eos deleniti eius quibusdam nesciunt deserunt</p>
+	            </div>
+	        </div>
+	        <a class="carousel-control-prev" href="#testimonials" role="button" data-slide="prev">
+	            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	            <span class="sr-only">Previous</span>
+	        </a>
+	        <a class="carousel-control-next" href="#testimonials" role="button" data-slide="next">
+	            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	            <span class="sr-only">Next</span>
+	        </a>
+	    </div>
+	</div>
+
+
+	<div class="container text-right"><p class="text-justify home-happy boom-opacity pb-4 mb-0">We are happy to serve many more food, consumer goods and edible oil industries across Ratnagiri, Raigad, Panvel and Navi Mumbai.</p></div>
 </div>
 
 
