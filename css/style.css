@@ -29,7 +29,7 @@ body
 	background: linear-gradient(rgba(12,45,70,0.8),rgba(12,45,70,0.6)), url(../images/sky.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	transition: 2s;
+	transition: 1s;
 	transition-timing-function: linear;
 }
 
@@ -1753,4 +1753,26 @@ label #bars
 	{
 		font-size: 15px;
 	}
+}
+
+.owner-card
+{
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	padding: 10px;
+}
+
+.card-image
+{
+	border-radius: 5px;
+}
+
+.card-name
+{
+	font-size: 25px;
+}
+
+.designation
+{
+	font-size: 20px;
 }
