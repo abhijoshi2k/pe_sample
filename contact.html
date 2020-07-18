@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prerana Enterprises | Contact Us</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Abhishek Joshi">
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+
+
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#33485a">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#33485a">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#33485a">
+
+	<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-add-css="false"></script>
+	<link href="https://use.fontawesome.com/releases/v5.13.0/css/svg-with-js.css" rel="stylesheet" />
+
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<link rel="icon" href="images/favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="images/favicon.png" type="image/png">
+
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+
+
+	<script type="text/javascript">
+		var no_of_click = 0;
+
+		function black(){
+			no_of_click++;
+			if(document.getElementById('check').checked)
+			{
+				document.getElementById('nav').style.background = '#fff';
+				document.getElementById('logo-dark').style.opacity = '1';
+				document.getElementById('logo-light').style.opacity = '0';
+				document.getElementById('bars').style.color = "#000";
+				setTimeout(function() {document.getElementById('notnav').classList.toggle('nodisplay');}, 500);
+				document.getElementById('bars').style.transform = 'rotate(-90deg)';
+				setTimeout(function() {document.getElementById('bars').classList.add('fa-times');}, 300);
+				setTimeout(function() {document.getElementById('bars').style.transform = 'rotate(-270deg)';}, 100);
+			}
+			else
+			{
+				navchange();
+				document.getElementById('notnav').classList.toggle('nodisplay');
+				document.getElementById('bars').style.transform = 'rotate(-180deg)';
+				setTimeout(function() {document.getElementById('bars').classList.add('fa-bars');}, 300);
+				setTimeout(function() {document.getElementById('bars').style.transform = 'rotate(0deg)';}, 100);
+			}
+		}
+
+		function page_height() {
+			setTimeout(function() {
+				document.getElementById('full-footer').style.marginTop = '0';
+				var doc_height = document.getElementsByTagName('body')[0].offsetHeight;
+				var view_height = window.innerHeight;
+				if(doc_height<view_height)
+				{
+					document.getElementById('full-footer').style.marginTop = (view_height - doc_height) + 'px';
+				}
+			}, 30);
+		}
+
+		function navchange() {
+			if(window.scrollY>2)
+			{
+				document.getElementById('nav').style.background = 'rgba(255,255,255,0.97)';
+				document.getElementById('logo-dark').style.opacity = '1';
+				document.getElementById('logo-light').style.opacity = '0';
+				document.getElementById('nav').style.borderBottom = '1px solid rgba(0,0,0,0.3)';
+				let items = document.getElementsByClassName('navbar-item');
+				let i=0;
+				for(i=0;i<items.length;i++)
+				{
+					items[i].style.color = '#393185';
+				}
+				document.getElementById('bars').style.color = "#000";
+				document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
+				document.getElementById('nav').style.height = '60px';
+				$("nav ul li").css("line-height","60px");
+				$("nav a img").css("height","50px");
+				$("nav a img").css("top","5px");
+			}
+			else
+			{
+				document.getElementById('nav').style.background = 'transparent';
+				document.getElementById('logo-light').style.opacity = '1';
+				document.getElementById('logo-dark').style.opacity = '0';
+				document.getElementById('nav').style.borderBottom = 'none';
+				if(window.innerWidth>930)
+				{
+					let items = document.getElementsByClassName('navbar-item');
+					let i=0;
+					for(i=0;i<items.length;i++)
+					{
+						items[i].style.color = 'rgba(255,255,255,1)';
+					}
+					document.getElementsByClassName('banner')[0].style.paddingTop = '70px';
+					document.getElementById('nav').style.height = '70px';
+					$("nav ul li").css("line-height","70px");
+					$("nav a img").css("height","55px");
+					$("nav a img").css("top","10px");
+				}
+				else
+				{
+					let items = document.getElementsByClassName('navbar-item');
+					let i=0;
+					for(i=0;i<items.length;i++)
+					{
+						items[i].style.color = '#393185';
+					}
+					document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
+					document.getElementById('nav').style.height = '60px';
+					$("nav ul li").css("line-height","60px");
+					$("nav a img").css("height","50px");
+					$("nav a img").css("top","5px");
+				}
+				document.getElementById('bars').style.color = "#fff";
+			}
+		}
+	</script>
+
+</head>
+<body>
+
+	<div class="banner pb-2 mb-3">
+
+		<nav id="nav">
+			<input type="checkbox" id="check" onchange="black();">
+			<label for="check">
+				<i class="fas fa-bars" id="bars"></i>
+			</label>
+			<a href="index"><img src="images/2.png" id="logo-light" alt="Prerana Enterprises"></a>
+			<a href="index"><img src="images/3.png" id="logo-dark" alt="Prerana Enterprises"></a>
+			<ul>
+				<li><a class="navbar-item" href="index"><i class="fas fa-home"></i> Home</a></li>
+				<li><a class="navbar-item" href="about"><i class="fas fa-file-contract"></i> About Us</a></li>
+				<li><a class="navbar-item" href="services"><i class="fas fa-box-open"></i> Our Services</a></li>
+				<li><a class="navbar-item" href="team"><i class="fas fa-users"></i> Our Team</a></li>
+				<li class="active" id="active"><a class="navbar-item" href="javascript: void(0)"><i class="fas fa-address-card"></i> Contact Us</a></li>
+			</ul>
+		</nav>
+
+		<div class="container">
+			<h2 class=" subname pt-2 pb-2 text-white">Contact Us</h2>
+		</div>
+
+	</div>
+
+
+<div id="notnav" class="nodisplay"></div>
+
+
+
+
+<div class="container contact-set pt-4">
+	<div class="row">
+		<div class="col-lg-6 col-sm-12">
+			<form class="ev_form" autocomplete="off">
+                <div class="form-group">
+                    <div class="form-required-show">
+                        <span class="form-required">* is for required.</span>
+                    </div>
+                    <label for="name">Name<span class="form-required"> *</span></label>
+                    <input type="text" id="name" class="form-control mt-1" placeholder="Enter Your Name" autocomplete="off" required></br>
+                    <label for="number">Mobile Number<span class="form-required"> *</span></label>
+                    <input type="tel" id="number" class="form-control mt-1" placeholder="Enter Your Mobile number" autocomplete="off" required>
+                	<small class="form-text text-muted"> We'll never share your mobile number with anyone else.</small>
+                	</br>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control mt-1" placeholder="Enter Your Email" autocomplete="off">
+                    <small class="form-text text-muted"> We'll never share your email with anyone else.</small>
+                    </br>
+                    <label for="message">Message</label><br>
+                    <textarea id="message" class="form-control mt-1 txt-area" placeholder="Type your message here" autocomplete="off"></textarea>
+                    <br>
+
+
+                    <button class="btn btn-danger ev_btn " type="submit" name="sub_form">Submit</button>
+    
+
+                </div>
+            </form>
+		</div>
+		<div class="col-lg-6 col-sm-12">
+			<div class="contact-about">
+
+
+				<div class="row pb-1">
+					<div class="col-12 col-sm-6 pt-0 pt-lg-2">
+						<div class="contact-head"><i class="fas fa-mobile-alt contact-fa"></i> Mobile Number:</div>
+						<div class="contact-info">
+							<div class="pb-sm-3 pb-2"><a href="tel:+" class="contact-call"><span class="btn btn-primary contact-us-btn"><i class="fas fa-phone-alt"></i></span> +91 9999999999</a><br></div>
+							<div class="pb-sm-3 pb-2"><a href="tel:+" class="contact-call"><span class="btn btn-primary contact-us-btn"><i class="fas fa-phone-alt"></i></span> +91 9999999999</a><br></div>
+							<div class="pb-sm-3 pb-2"><a href="tel:+" class="contact-call"><span class="btn btn-success contact-us-whatsapp"><i class="fab fa-whatsapp"></i></span> +91 9999999999</a><br></div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 pt-0 pt-lg-2">
+						<div class="contact-head"><i class="far fa-envelope contact-fa"></i> Email Address:</div>
+						<div class="contact-info">email@gmail.com</div>
+						<div class="contact-head"><i class="fas fa-store-alt contact-fa"></i> Address:</div>
+						<div class="contact-info">Address... <br>Address...</div>
+					</div>
+				</div>
+
+
+				
+				<div class="contact-info-special pt-lg-5"><i class="fas fa-home contact-fa"></i> <b>If you live around our location...</b><br>You can also visit us at the above mentioned address to place your orders and have a look at our factory environment.<br>We would love meet you and discuss the orders across table.</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<h2 class="text-center subname pt-3 pb-md-4 pb-4"><i class="fas fa-map-marker-alt icon-color"></i> Find Us Here</h2>
+
+
+<div class="container pb-4"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122139.63575622237!2d73.17021154688368!3d17.76026599562189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be9c229663fea65%3A0x2cba3d6781d9923d!2sPrerana%20Enterprises!5e0!3m2!1sen!2sin!4v1594105915819!5m2!1sen!2sin" height="500" frameborder="0" style="border:5px solid #bbb; border-radius: 10px; width: 100%;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+
+
+
+
+
+
+
+
+
+<footer class="footer" id="full-footer">
+	
+	<div class="credit-box py-0 my-0" id="credit-box-contact"><div class="text-right credit container py-0 my-0" id="credit-contact">Website by Abhishek Joshi<br>+919757468857</div></div>
+
+	<div class="copyright small text-center py-1"><i class="far fa-copyright"></i> 2020 Prerana Enterprises. All rights reserved.</div>
+</footer>
+
+
+<script type="text/javascript">
+	
+	if(window.scrollY>2)
+	{
+		document.getElementById('nav').style.background = 'rgba(255,255,255,0.97)';
+		document.getElementById('logo-dark').style.opacity = '1';
+		document.getElementById('logo-light').style.opacity = '0';
+		document.getElementById('nav').style.borderBottom = '1px solid rgba(0,0,0,0.3)';
+		let items = document.getElementsByClassName('navbar-item');
+		let i=0;
+		for(i=0;i<items.length;i++)
+		{
+			items[i].style.color = '#393185';
+		}
+		document.getElementById('bars').style.color = "#000";
+		document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
+		document.getElementById('nav').style.height = '60px';
+		$("nav ul li").css("line-height","60px");
+		$("nav a img").css("height","50px");
+		$("nav a img").css("top","5px");
+	}
+	else if(window.innerWidth<930)
+	{
+		document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
+		document.getElementById('nav').style.height = '60px';
+		$("nav ul li").css("line-height","60px");
+		$("nav a img").css("height","50px");
+		$("nav a img").css("top","5px");
+	}
+	else
+	{
+		document.getElementsByClassName('banner')[0].style.paddingTop = '70px';
+		document.getElementById('nav').style.height = '70px';
+		$("nav a img").css("top","10px");
+		$("nav a img").css("height","55px");
+	}
+	
+	$("nav ul li").hover(function() {
+		if(window.innerWidth>930 && window.scrollY<2)
+		{
+			$("nav ul li a").css("color","#fff");
+		}
+	});
+
+
+
+	document.getElementById('notnav').onclick = function() {
+		document.getElementById('check').checked=false;
+		black();
+	}
+
+	document.getElementById('active').onclick = function() {
+		if(window.innerWidth<=930)
+		{
+			document.getElementById('check').checked=false;
+			black();
+		}
+	}
+
+	window.onscroll = function() {
+
+		navchange();
+
+
+	}
+
+	
+
+
+
+	window.onresize = function() {
+		navchange();
+
+		if(document.getElementById('check').checked)
+		{
+			if(window.innerWidth<=930)
+			{
+				document.getElementById('notnav').classList.remove('nodisplay');
+			}
+			else
+			{
+				document.getElementById('notnav').classList.add('nodisplay');
+			}
+		}
+
+
+	}
+
+
+	window.onload = function() {
+		document.getElementById('check').checked=false;
+		page_height();
+		setTimeout(function() {
+			if(document.getElementById('check').checked && no_of_click==0)
+			{
+				document.getElementById('check').checked=false;
+			}
+			page_height();
+		}, 2200);
+	};
+
+		
+	
+</script>
+
+</body>
+</html>
