@@ -1964,3 +1964,8 @@ label #bars
 		font-size: 12px;
 	}
 }
+
+.testimonial-quotes
+{
+	color: rgba(0,0,0,0.2);
+}
