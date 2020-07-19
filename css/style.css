@@ -1763,6 +1763,13 @@ label #bars
 	border-radius: 5px;
 	border: 1px solid rgba(0,0,0,0.3);
 	padding: 10px;
+	transition: 0.5s;
+}
+
+.owner-card:hover
+{
+	transform: scale(1.03);
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
 }
 
 .card-image
