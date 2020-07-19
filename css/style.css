@@ -106,6 +106,7 @@ nav ul li a
 	font-size: 18px;
 	padding: 10px 0;
 	transition: 0.4s;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 nav ul li a:hover
@@ -758,7 +759,7 @@ label #bars
   
 .home-happy
 {
-	font-family: title;
+	font-family: 'Varta', sans-serif;
 	font-size: 25px;
 }
 
@@ -1318,6 +1319,7 @@ label #bars
 .home-goal-desc
 {
 	font-size: 20px;
+	font-family: 'Varta', sans-serif;
 }
 
 @media(max-width: 780px)
@@ -1397,6 +1399,7 @@ label #bars
 .services-quote
 {
 	font-size: 26px;
+	font-family: 'Varta', sans-serif;
 }
 
 @media(max-width: 991px)
@@ -1911,6 +1914,7 @@ label #bars
 .testimonial-height
 {
 	font-size: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 @media(max-width: 991px)
