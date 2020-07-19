@@ -178,11 +178,7 @@
 			var car_item = document.getElementsByClassName('carousel-item');
 			for(var i=0; i<car_item.length;i++)
 			{
-				if(car_item[i].classList.contains("active"))
-				{
-					car_item[i].classList.remove("active");
-					break;
-				}
+				car_item[i].classList.remove("active");
 			}
 			car_item[0].classList.add("active");
 
@@ -331,6 +327,13 @@
 				document.getElementById('uni-contact-btn').style.transition = '0s';
 			}, 550);
 		}
+
+		function contact_submit()
+		{
+			document.getElementById('thank-pop').style.display = 'initial';
+			setTimeout(function() {slideout();},2000);
+			return false;
+		}
 	</script>
 
 </head>
@@ -385,7 +388,7 @@
 		<h2 class=" subname pt-2 pb-2 proud-client col-2 text-center close-pop text-danger" onclick="slideout();" id="close-pop"><i class="fas fa-times"></i></h2>
 	</div>
 	
-	<form class="ev_form mt-0 mb-3" autocomplete="off" id="pop-form">
+	<form class="ev_form mt-0 mb-3" autocomplete="off" id="pop-form" onsubmit="return contact_submit();">
         <div class="form-group mb-1">
             <div class="form-required-show">
                 <span class="form-required">* is for required.</span>
@@ -393,7 +396,7 @@
             <label for="name">Name<span class="form-required"> *</span></label>
             <input type="text" id="name" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Name" autocomplete="off" required></br>
             <label for="number">Mobile Number<span class="form-required"> *</span></label>
-            <input type="tel" id="number" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
+            <input type="tel" pattern="[+987][0-9]{9,12}" id="number" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
         	</br>
             <label for="email">Email Address</label>
             <input type="email" id="email" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Email" autocomplete="off">
@@ -522,15 +525,25 @@
 	    	<ol class="carousel-indicators mb-0">
 			    <li data-target="#testimonials" data-slide-to="0" class="active"></li>
 			    <li data-target="#testimonials" data-slide-to="1"></li>
+			    <li data-target="#testimonials" data-slide-to="2"></li>
+			    <li data-target="#testimonials" data-slide-to="3"></li>
 			</ol>
 	        <div class="carousel-inner" role="listbox">
 	            <div class="carousel-item active text-center p-4">
-	            	<h5 class="testimonial-name">Name</h5>
-	                <p class="testimonial-height" id="longest">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque exercitationem vel tenetur, voluptas, neque enim, suscipit nisi eos deleniti eius quibusdam nesciunt deserunt officia natus corrupti, eum voluptate inventore iure!</p>
+	            	<h5 class="testimonial-name">Raju Ent.</h5>
+	                <p class="testimonial-height" id="longest">Prerana Enterprises has not only been our consistent supplier of corrugated boxes, but also extended the level of support and service. They have always provided apt solutions whenever we approached them.</p>
 	            </div>
 	            <div class="carousel-item text-center p-4">
-	            	<h5 class="testimonial-name">Name</h5>
-	                <p class="testimonial-height">2Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque exercitationem vel tenetur, voluptas, neque enim, suscipit nisi eos deleniti eius quibusdam nesciunt deserunt</p>
+	            	<h5 class="testimonial-name">Shyaam Industries</h5>
+	                <p class="testimonial-height">Prerana Enterprises is a very good partner and always willing to go above and beyond when asked. They have always been punctual at their work and provided best customer support.</p>
+	            </div>
+	            <div class="carousel-item text-center p-4">
+	            	<h5 class="testimonial-name">Baburao Chemicals</h5>
+	                <p class="testimonial-height">This company has always created perfect boxes according to our specifications. The quality of the boxes has always been best in class, and the service has always been amazing.</p>
+	            </div>
+	            <div class="carousel-item text-center p-4">
+	            	<h5 class="testimonial-name">Some Name</h5>
+	                <p class="testimonial-height">The service provided by this company is exceptional. They always provide perfect and reliable products whose quality can be trusted at any given time.</p>
 	            </div>
 	        </div>
 	        <a class="carousel-control-prev" href="#testimonials" role="button" data-slide="prev">
